@@ -36,7 +36,7 @@ const handleSubmit = async (e) => {
       }
       setLoading(false);
       setError(null);
-      navigate('/sing-in');
+      navigate('/sign-in');
   } catch (error) {
     setLoading(false);
     setError(error.message);
@@ -60,12 +60,12 @@ return (
       </form>
       <div className="flex gap-2 mt-2"> 
         <p>Have an account?</p>
-        <Link to={"sing-in"}>
+        <Link to={"sign-in"}>
         <span className='text-blue-700'>Sign in</span>
         </Link>
 
       </div>
-      (error && <p className='text-red-500 mt-5'>{error}</p>);
+      {error && <p className='text-red-500 mt-5'>{error}</p>}
     </div>
-  )
+  );
 }
